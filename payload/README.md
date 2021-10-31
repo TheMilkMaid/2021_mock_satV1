@@ -6,4 +6,4 @@ Please create a new directory for your project, and include the following in a R
 
 This is a cheat sheet on useful git commands:  https://education.github.com/git-cheat-sheet-education.pdf
 
-There is also a tutorial in Satellite-General on how to use github under Files -> Recordings.
+There is also a tutorial in Satellite-General on how to use github under Files -> Recordings. You can also ask the payload manager for help with a git-related issue. 
