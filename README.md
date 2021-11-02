@@ -1,5 +1,6 @@
 # 2021_mock_satV1
 QSAT mock-sat V1 made in Fall 2021
+**REPO RULES: Require pull request reviews before merging to master. All commits must be made to a non-protected branch and submitted via a pull request with the required number of (1) approving review before it can be merged into the branch.**
 
 ## What is the MockSat V1?
 V1 of our 2021-2022 MockSat is a minimum viable product system that will execute the purpose of our Selfie Sat for CSDC-6. Our final design will be presented internally in December 2021. The system can:
