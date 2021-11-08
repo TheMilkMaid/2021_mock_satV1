@@ -5,7 +5,6 @@
 
 
 def capture_img(imgpath):
-    """ 
     from picamera import PiCamera
     from time import sleep
     
@@ -15,7 +14,7 @@ def capture_img(imgpath):
     sleep(3)
     camera.capture(imgpath)
     camera.stop_pewview()
-
+"""
     params: 
         imgpath: Path to location to store the image. 
     """ 
