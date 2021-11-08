@@ -11,7 +11,7 @@ def capture_img(imgpath):
     camera = PiCamera()
     camera.resolution = (2592,1944) # 4:3 aspect ratio
     camera.start_preview()
-    sleep(3)
+    sleep(1)
     camera.capture(imgpath)
     camera.stop_pewview()
 """
