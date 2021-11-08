@@ -8,7 +8,7 @@ def capture_img(imgpath):
     sleep(1)
     camera.capture(imgpath)
     camera.stop_preview()
-"""
+    """
     params: 
-        imgpath: Path to location to store the image. 
+        imgpath: Path to location to store the image. End path name with ".png" or ".jpeg".
     """ 
