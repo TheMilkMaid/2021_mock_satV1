@@ -7,7 +7,7 @@ def capture_img(imgpath):
     camera.start_preview()
     sleep(1)
     camera.capture(imgpath)
-    camera.stop_pewview()
+    camera.stop_preview()
 """
     params: 
         imgpath: Path to location to store the image. 
