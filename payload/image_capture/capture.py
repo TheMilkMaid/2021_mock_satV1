@@ -1,9 +1,3 @@
-
-
-
-
-
-
 def capture_img(imgpath):
     from picamera import PiCamera
     from time import sleep
