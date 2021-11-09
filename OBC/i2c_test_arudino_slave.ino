@@ -6,8 +6,9 @@ static_assert(LOW == 0, "Expecting LOW to be 0");
 int flag_int_send_to_PI = 0; // can flag be fetched from register?
 int flag_int_receive_from_PI = 0; // can flag be fetched from register?
 
-char data_send_to_PI = 't';
+int data_send_to_PI = 4;
 
+char data[12] = {};
 
 void setup()
 {
@@ -30,21 +31,27 @@ void loop()
 // this function is registered as an event, see setup()
 void receiveEvent(int howMany)
 {
-  while(1 < Wire.available()) // loop through all but the last
+  int i = 0;
+  while(Wire.available()) // loop through all but the last
   {
-    char c = Wire.read(); // receive byte as a character
-    digitalWrite(ledPin, c); // make LED on?
-    Serial.print(c);         // print the character
+    //Serial.print(c);         // print the character
+    data[i] = Wire.read();
+    i++; 
   }
-  int x = Wire.read();    // receive byte as an integer
-  Serial.println(x);         // print the integer
+  data[i] = '\0';
+    //for (int i = 0; i < 25; i++){
+      //data[i] = Wire.read(); // receive byte as a character and stored in data[]
+    //}
+    Serial.print(data); // print the string
+  
 }
 
 
 void sendEvent()
 {
-  while(1 < Wire.available())
-  {
-    Wire.write(data_send_to_PI);
-  }
+  Wire.write(data_send_to_PI);
+  //while(Wire.available())
+  //{
+    //Wire.write(data_send_to_PI);
+  //}
 }
