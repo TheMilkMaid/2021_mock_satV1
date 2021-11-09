@@ -3,12 +3,10 @@
 
 const int ledPin = 13; //onboard LED
 static_assert(LOW == 0, "Expecting LOW to be 0");
-int flag_int_send_to_PI = 0; // can flag be fetched from register?
-int flag_int_receive_from_PI = 0; // can flag be fetched from register?
 
-int data_send_to_PI = 4;
+int data_send_to_PI = 1;
 
-char data[12] = {};
+char data[12] = {}; // receive data array
 
 void setup()
 {
@@ -23,7 +21,12 @@ void setup()
 
 void loop()
 {
-  delay(100);
+  delay(10);
+  delay(10);
+  delay(10);
+  delay(10);
+  delay(10);
+  data_send_to_PI = 1;
 }
 
 
@@ -34,7 +37,6 @@ void receiveEvent(int howMany)
   int i = 0;
   while(Wire.available()) // loop through all but the last
   {
-    //Serial.print(c);         // print the character
     data[i] = Wire.read();
     i++; 
   }
@@ -42,6 +44,9 @@ void receiveEvent(int howMany)
     //for (int i = 0; i < 25; i++){
       //data[i] = Wire.read(); // receive byte as a character and stored in data[]
     //}
+    if (data[0] == 1){
+      data_send_to_PI = 0;
+      }
     Serial.print(data); // print the string
   
 }
