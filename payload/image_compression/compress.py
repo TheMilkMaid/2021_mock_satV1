@@ -1,7 +1,7 @@
 
 
 
-def compress_img(img: Path, outsize: tuple = (2000, 1000)):
+def compress_img(img: Path):
     """ 
     params: 
         img: Path to the input image
